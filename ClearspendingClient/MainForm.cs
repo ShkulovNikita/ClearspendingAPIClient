@@ -25,6 +25,7 @@ namespace ClearspendingClient
             string hintText = "";
             if (pathToFile != "")
                 hintText = FilesHandler.ReadFile(pathToFile);
+            else hintText = "Ввод параметров не требуется.";
             hintTextBox.Text = hintText;
         }
 
@@ -121,6 +122,14 @@ namespace ClearspendingClient
                     apiMethod = "db_info/statistics/";
                     prms = "?info=all";
                     break;
+            }
+
+            //пустые параметры для search или select недопустимы
+            if (((apiMethod.Contains("search"))||(apiMethod.Contains("select")))
+               &&((prms == "")||(prms == "?")))
+            {
+                MessageBox.Show("Необходимо ввести параметры", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             //выполнение запроса
