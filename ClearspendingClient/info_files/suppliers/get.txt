@@ -1,0 +1,8 @@
+﻿Описание
+Поля, которые можно использовать для поиска: "id", "inn" и "kpp".
+inn — ИНН поставщика;
+kpp — КПП поставщика;
+id - в случае отсутствия inn и kpp.
+
+Примеры
+http://openapi.clearspending.ru/restapi/v3/suppliers/get/?inn=6450614330&kpp=645001001

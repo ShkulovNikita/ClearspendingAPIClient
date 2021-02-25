@@ -1,0 +1,8 @@
+﻿Описание
+Поля, которые можно использовать для поиска: "regnum" и "id".
+regnum - основное поле, которое используется в большинстве случаев, за исключением контрактов, в которых оно отсутствует;
+id - в случае отсутствия regnum у контракта.
+
+Примеры
+http://openapi.clearspending.ru/restapi/v3/contracts/get/?regnum=0173100000414000011
+http://openapi.clearspending.ru/restapi/v3/contracts/get/?id=979bf153-27d6-4a9b-9d95-4ddc1e2ec91f

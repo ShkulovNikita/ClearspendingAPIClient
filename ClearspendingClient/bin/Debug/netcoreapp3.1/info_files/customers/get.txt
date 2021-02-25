@@ -1,0 +1,7 @@
+﻿Описание
+Поля, которые можно использовать для поиска "id" и "spzregnum".
+spzregnum — основное поле, которое используется в большинстве случаев;
+id - в случае отсутствия spzregnum.
+
+Примеры
+http://openapi.clearspending.ru/restapi/v3/customers/get/?spzregnum=01731000070

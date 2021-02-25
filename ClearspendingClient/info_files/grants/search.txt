@@ -1,0 +1,22 @@
+﻿Описание
+Используется для поиска по системе закупок. Искусственное ограничение на выдачу: 500.
+
+productsearch - полнотекстовый поиск по всем предметам в грантах;
+name_organization_search - полнотекстовый поиск по названию организации;
+address_search - полнотекстовый поиск по адресу организации;
+operator - поиск по операторам грантов;
+daterange - дата подписания гранта (dd.mm.yyyy-dd.mm.yyyy);
+OGRN - поиск по коду ОГРН в контракте;
+price - диапазон цен контракта (minFloat-maxFloat);
+grant_status - статус гранта (all или winner).
+
+Специальные поля:
+total - найдено записей;
+page - страница в выдаче;
+perpage - количество записей в одном запросе (max - 50).
+
+Примеры полнотекстовый поиск по грантам
+Поиск грантов, которые выиграли в Туле:
+http://openapi.clearspending.ru/restapi/v3/grants/search/?grant_status=winner&address_search=%D0%A2%D1%83%D0%BB%D0%B0
+Поиск организаций, в название которых входит "Щит" и которые участвовали в грантах:
+http://openapi.clearspending.ru/restapi/v3/grants/search/?name_organization_search=%D0%A9%D0%B8%D1%82
